@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/emp', 'EmployeeController@index');
+Route::get('/emp', 'EmployeeController@index')->name('emp.index');
+Route::get('/emp/create', 'EmployeeController@create')->name('emp.create');
+Route::post('/emp', 'EmployeeController@store')->name('emp.store');
+
 
 Route::get('/','PlaceController@index')->name('place.index');
 Route::get('/create', 'PlaceController@create')->name('place.create');
